@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Habit Tracker</h1>
+    <button id="theme-toggle" aria-label="Toggle theme">
+      <span class="icon-light">&#9788;</span>
+      <span class="icon-dark">&#9790;</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="add-habit">
+      <form id="habit-form">
+        <input type="text" id="habit-input" placeholder="Add a new habit..." maxlength="50" required>
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <section class="habits-list" id="habits-list">
+      <h2>Today's Habits</h2>
+      <p class="date-display" id="date-display"></p>
+      <ul id="habit-items"></ul>
+      <p class="empty-state" id="empty-state">No habits yet. Add one above!</p>
+    </section>
+
+    <section class="chart-section">
+      <h2>Weekly Overview</h2>
+      <div class="chart-container">
+        <canvas id="weekly-chart"></canvas>
+      </div>
+      <div class="chart-legend" id="chart-legend"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built by <strong>Aizondy</strong> | <a href="https://github.com/Aizondy" target="_blank" rel="noopener">github.com/Aizondy</a></p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
